@@ -17,6 +17,11 @@ public class UserController {
     public List<User> selectAll(){
         return userService.selectAll();
     }
+    @RequestMapping("/insertUser")
+    public int insertUser( ){
+       return userService.insertUser();
+    }
+    ///////////////////以下没有测试过
     @RequestMapping("/selectById")
     public User selectById(@RequestBody String id){
         return userService.selectById(id);
@@ -27,10 +32,6 @@ public class UserController {
     }
     @RequestMapping("/deleteUserById")
     public int deleteUserById(@RequestBody String id){
-       return userService.deleteUserById(id);
-    }
-    @RequestMapping("/insertUser")
-    public int insertUser( ){
-       return userService.insertUser();
+        return userService.deleteUserById(id);
     }
 }
