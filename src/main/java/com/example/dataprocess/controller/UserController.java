@@ -21,7 +21,6 @@ public class UserController {
     public int insertUser( ){
        return userService.insertUser();
     }
-    ///////////////////以下没有测试过
     @RequestMapping("/selectById")
     public User selectById(@RequestBody String id){
         return userService.selectById(id);
@@ -32,6 +31,7 @@ public class UserController {
     }
     @RequestMapping("/deleteUserById")
     public int deleteUserById(@RequestBody String id){
+
         return userService.deleteUserById(id);
     }
 }

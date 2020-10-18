@@ -13,7 +13,7 @@ public interface UserMapper {
     public User selectById(String id);
     @Update("update user set name=#{name},password=#{password} where id =#{id};")
     public int update(User user);
-    @Delete("delect from user where id =#{id}")
+    @Delete("delete from user where id =#{id}")
     public int deleteUserById(String id);
     @Insert("insert into user (id,name,password) values(null,#{name},#{password});")
     public int insertUser(User user);

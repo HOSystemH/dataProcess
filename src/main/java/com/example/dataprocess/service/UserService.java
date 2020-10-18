@@ -16,13 +16,14 @@ public class UserService {
         return userMapper.selectAll();
     }
     public User selectById(String id){
-        return userMapper.selectById("1");
+
+        return userMapper.selectById(id);
     };
     public int update(User user){
         return userMapper.update(user);
     }
     public int deleteUserById(String id){
-        return deleteUserById("1");
+            return userMapper.deleteUserById(id);
     }
     public int insertUser(){
         int i=0;
