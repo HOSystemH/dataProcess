@@ -71,6 +71,22 @@
             <artifactId>druid</artifactId>
             <version>1.1.21</version>
         </dependency>
+        <!--单独引入logback并全局排除-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--log4j2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

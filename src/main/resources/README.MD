@@ -3,4 +3,4 @@ test
 表名为user
 
 分为两个环境
-hn523
+dev和local
