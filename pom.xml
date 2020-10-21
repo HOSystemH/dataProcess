@@ -68,8 +68,8 @@
         <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.1.21</version>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.23</version>
         </dependency>
         <!--单独引入logback并全局排除-->
         <dependency>

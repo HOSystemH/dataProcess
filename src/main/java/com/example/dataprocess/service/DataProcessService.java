@@ -12,10 +12,6 @@ import java.io.File;
 @Service
 public class DataProcessService {
 
-//    public String dataProcess(){
-//        return "success";
-//    }
-
     public void readExcel(){
         String fileName = TestFileUtil.getPath()+ "excel" + File.separator+"1.xlsx";
         ExcelReaderBuilder read = EasyExcel.read(fileName, ChannelData.class, new ChannelDataExcelListener());
