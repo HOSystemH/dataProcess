@@ -12,6 +12,7 @@ public class DataProcessController {
     DataProcessService dataProcessService;
     @RequestMapping("/")
     public String dataProcess(){
-        return dataProcessService.dataProcess();
+         dataProcessService.readExcel();
+        return "ssss";
     }
 }
