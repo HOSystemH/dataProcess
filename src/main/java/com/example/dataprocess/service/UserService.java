@@ -1,5 +1,6 @@
 package com.example.dataprocess.service;
 
+import com.alibaba.fastjson.JSON;
 import com.example.dataprocess.dao.UserMapper;
 import com.example.dataprocess.entity.User;
 import lombok.extern.slf4j.Slf4j;
@@ -16,8 +17,10 @@ public class UserService {
     UserMapper userMapper;
     public List<User> selectAll(){
         List<User> users = userMapper.selectAll();
-//        for (User user:users){
-//        }
+        for (User user:users){
+            String s = JSON.toJSONString(user);
+            log.info(s);
+        }
         return users;
     }
     public User selectById(String id){ return userMapper.selectById(id); };
