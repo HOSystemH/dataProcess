@@ -15,7 +15,10 @@ public class UserService {
     @Resource
     UserMapper userMapper;
     public List<User> selectAll(){
-        return userMapper.selectAll();
+        List<User> users = userMapper.selectAll();
+//        for (User user:users){
+//        }
+        return users;
     }
     public User selectById(String id){ return userMapper.selectById(id); };
     public int update(User user){
